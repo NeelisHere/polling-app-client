@@ -4,6 +4,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import Login from "./components/Login";
 import HomePage from "./pages/HomePage";
 import Register from "./components/Register";
+import { Toaster } from 'react-hot-toast'
 
 const router = createBrowserRouter([
 	{
@@ -31,6 +32,7 @@ const App = () => {
 	return (
 		<>
 			<RouterProvider router={router} />
+			<Toaster />
 		</>
 	);
 }
