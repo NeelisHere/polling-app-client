@@ -54,6 +54,11 @@ type OptionType = {
 }
 
 type PollType = {
+    id: string,
     question: string,
     options: OptionType[]
+}
+
+type PollPropsType = {
+    poll: PollType
 }

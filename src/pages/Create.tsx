@@ -11,6 +11,7 @@ const Create = () => {
     const [questionText, setQuestionText] = useState<string>('')
     const handleCreatePoll = () => {
         const poll: PollType = {
+            id: nanoid(),
             question: questionText,
             options
         }
