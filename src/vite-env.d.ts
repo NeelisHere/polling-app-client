@@ -32,3 +32,28 @@ type UserContextProps = {
     currentUser: UserType | null,
     setCurrentUser: React.Dispatch<React.SetStateAction<UserType | null>>
 }
+
+type optionsInputType = {
+    id: string
+    text: string,
+}
+
+type optionsPropsType = {
+    options: optionsInputType[],
+    setOptions: React.Dispatch<React.SetStateAction<optionsInputType[]>>
+}
+
+type optionItemPropsType = {
+    option: optionsInputType,
+    setOptions: React.Dispatch<React.SetStateAction<optionsInputType[]>>
+}
+
+type OptionType = {
+    id: string,
+    text: string,
+}
+
+type PollType = {
+    question: string,
+    options: OptionType[]
+}

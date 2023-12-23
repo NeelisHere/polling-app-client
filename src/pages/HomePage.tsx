@@ -1,24 +1,25 @@
-import { Avatar, Box, Text } from "@chakra-ui/react"
-import Loading from "../components/Loading"
-import { useCurrentUser } from "../providers/UserProvider"
-import { Outlet } from "react-router-dom"
+import { Box } from "@chakra-ui/react"
+import { Outlet, useNavigate } from "react-router-dom"
+import Navbar from "../components/Navbar"
+import { useEffect } from "react"
 
 const HomePage = () => {
-    const contextValue = useCurrentUser()
-    if (!contextValue) {
-        return <Loading />
-    }
+    const navigate = useNavigate()
+    useEffect(() => {
+        navigate('/create')
+    }, [navigate])
     return (
         <Box
-            border={'2px solid red'}
+            // border={'2px solid red'}
             h={'100vh'}
             w={'100%'}
         >
             <Box
-                border={'2px solid red'}
-                w={'200px'}
+                // border={'2px solid red'}
+                maxW={'700px'}
                 m={'0 auto'}
             >
+                <Navbar />
                 <Outlet />
             </Box>
         </Box>
